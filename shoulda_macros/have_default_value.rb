@@ -4,7 +4,7 @@ module HaveDefaultValue
  
     context "#{klass}" do
       should "have a default value of '#{value}' for '#{field}'" do
-          assert_equal klass.new.send(field), value, "#{klass} does have a default value of '#{value}' for '#{field}'"
+          assert_equal klass.new.send(field), value, "#{klass} does not have a default value of '#{value}' for '#{field}'"
       end
     end
   end
