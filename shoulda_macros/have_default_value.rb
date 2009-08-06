@@ -1,10 +1,11 @@
 module HaveDefaultValue
   def should_have_default_value(field, value = nil)
-    klass = self.name.gsub(/Test$/, '').constantize
+    klass_name = self.name.gsub(/Test$/, '').constantize
  
-    context "#{klass}" do
+    context "#{klass_name}" do
       should "have a default value of '#{value}' for '#{field}'" do
-          assert_equal klass.new.send(field), value, "#{klass} does not have a default value of '#{value}' for '#{field}'"
+          klass = subject
+          assert_equal klass.send(field), value, "#{klass_name} does not have a default value of '#{value}' for '#{field}'"
       end
     end
   end
