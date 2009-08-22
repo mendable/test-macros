@@ -23,6 +23,12 @@ so that the submodules are pulled down when you deploy your application.
 
 This verifies that when a new model instance is instantiated, the field specified is created with the default value given.
 
+=== should_have_thinking_sphinx_index
+
+  should_have_thinking_sphinx_index :name, :field1, :field2, :fieldN
+
+Verifies that thinking sphinx defines an index on the model and indexes the list of given fields.
+
 
 == Patches
 If you branch and enhance this product in anyway, please do contact me to let me know, either on GitHub (http://www.github.com/mendable) or through my website (http://www.mendable.com).
